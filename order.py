@@ -23,10 +23,10 @@ class Order:
         self._customer = None
         self._coffee = None
         self._price = None
-        self.customer = customer  # This will trigger the setter
-        self.coffee = coffee      # This will trigger the setter
-        self.price = price        # This will trigger the setter
-        Order.orders.append(self)  # Add the order to the class-level list
+        self.customer = customer 
+        self.coffee = coffee      
+        self.price = price        
+        Order.orders.append(self)  
 
     @property
     def customer(self):

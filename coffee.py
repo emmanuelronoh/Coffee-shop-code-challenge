@@ -47,7 +47,7 @@ class Coffee:
         Returns:
             list: A list of Order objects where this coffee is ordered.
         """
-        from order import Order  # Local import to avoid circular dependency
+        from order import Order  
         return [order for order in Order.orders if order.coffee == self]
 
     def customers(self):
