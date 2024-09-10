@@ -16,7 +16,7 @@ class Customer:
             ValueError: If the name is not a valid string.
         """
         self._name = None
-        self.name = name  # Use property setter for validation
+        self.name = name  
 
     @property
     def name(self):
@@ -49,7 +49,7 @@ class Customer:
         Returns:
             list: A list of Order objects associated with the customer.
         """
-        from order import Order  # Local import to avoid circular import
+        from order import Order  
         return [order for order in Order.orders if order.customer == self]
 
     def coffees(self):

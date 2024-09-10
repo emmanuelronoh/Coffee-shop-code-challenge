@@ -14,7 +14,7 @@ class Coffee:
             ValueError: If the name is less than 3 characters long.
         """
         self._name = None
-        self.name = name  # Use property setter for validation
+        self.name = name  
 
     @property
     def name(self):

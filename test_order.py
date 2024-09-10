@@ -5,8 +5,8 @@ from order import Order
 
 def test_order_initialization():
     """Test that an Order object is correctly initialized."""
-    customer = Customer(name="Alice")
-    coffee = Coffee(name="Latte")
+    customer = Customer(name="Faith")
+    coffee = Coffee(name="Americano")
     order = Order(customer, coffee, 5.0)
     assert order.customer == customer
     assert order.coffee == coffee
@@ -18,7 +18,7 @@ def test_order_invalid_customer():
 
     The customer must be an instance of Customer.
     """
-    coffee = Coffee(name="Latte")
+    coffee = Coffee(name="Americano")
     with pytest.raises(ValueError):
         Order("InvalidCustomer", coffee, 5.0)
 
@@ -28,7 +28,7 @@ def test_order_invalid_coffee():
 
     The coffee must be an instance of Coffee.
     """
-    customer = Customer(name="Alice")
+    customer = Customer(name="Faith")
     with pytest.raises(ValueError):
         Order(customer, "InvalidCoffee", 5.0)
 
@@ -38,8 +38,8 @@ def test_order_invalid_price():
 
     The price must be between 1.0 and 10.0.
     """
-    customer = Customer(name="Alice")
-    coffee = Coffee(name="Latte")
+    customer = Customer(name="Faith")
+    coffee = Coffee(name="Americano")
     with pytest.raises(ValueError):
         Order(customer, coffee, 0.5)
     with pytest.raises(ValueError):
@@ -49,7 +49,7 @@ def test_order_repr():
     """
     Test that the __repr__ method of the Order class returns the correct string representation.
     """
-    customer = Customer(name="Alice")
-    coffee = Coffee(name="Latte")
+    customer = Customer(name="Faith")
+    coffee = Coffee(name="Americano")
     order = Order(customer, coffee, 5.0)
-    assert repr(order) == "Order(customer='Alice', coffee='Latte', price=5.0)"
+    assert repr(order) == "Order(customer='Faith', coffee='Americano', price=5.0)"

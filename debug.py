@@ -5,8 +5,8 @@ from coffee import Coffee
 from order import Order
 
 # Sample data for testing
-coffee1 = Coffee(name="Latte")
-coffee2 = Coffee(name="Espresso")
+coffee1 = Coffee(name="Americano")
+coffee2 = Coffee(name="Flat white")
 
 customer1 = Customer(name="Victor")
 customer2 = Customer(name="Faith")
@@ -23,3 +23,5 @@ print("Customer 2 orders:", customer2.orders())
 print("Coffee1 orders:", coffee1.orders())
 print("Coffee2 orders:", coffee2.orders())
 print("Customer who spent most on Coffee1:", Customer.most_aficionado(coffee1))
+
+

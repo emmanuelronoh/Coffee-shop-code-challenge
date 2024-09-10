@@ -1,11 +1,9 @@
-"""This module defines the Order class for managing orders in the coffee shop."""
-
 from coffee import Coffee
 from customer import Customer
 
 class Order:
     """Represents an order made by a customer for a specific coffee."""
-    
+
     orders = []  # Class-level attribute to store all orders
 
     def __init__(self, customer, coffee, price):
@@ -20,13 +18,11 @@ class Order:
         Raises:
             ValueError: If the arguments are not of the correct type.
         """
-        self._customer = None
-        self._coffee = None
-        self._price = None
-        self.customer = customer 
-        self.coffee = coffee      
-        self.price = price        
-        Order.orders.append(self)  
+        # Use setters to initialize attributes
+        self.customer = customer
+        self.coffee = coffee
+        self.price = price
+        Order.orders.append(self)  # Append to class-level orders list
 
     @property
     def customer(self):
